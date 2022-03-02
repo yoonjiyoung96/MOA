@@ -1,0 +1,41 @@
+*{margin:0; padding:0;}
+.center { width:100%; height:100%;}
+.center .swiper-slide {text-align: center; background: #fff;
+			  /* Center slide text vertically */
+			  -webkit-box-pack: center;
+			  -ms-flex-pack: center;
+			  -webkit-justify-content: center;
+			  justify-content: center;
+			  -webkit-box-align: center;
+			  -ms-flex-align: center;
+			  -webkit-align-items: center;
+			  align-items: center; }
+.center .swiper-slide img{width:100%;}
+/*블릿버튼 영역*/
+.swiper-pagination-bullet{background:pink; width:10px; height:10px; opacity:0.5;}
+.swiper-pagination-bullet-active{opacity:1;}
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets{bottom:10px;}
+
+.contents2{
+	position:relative;}
+
+
+/*이동버튼 이미지 변경하기*/
+.con_next{content:url(../img/slide_b_right.png);
+	width: 25px;
+	height: 68px;
+	outline-style:none;}
+.con_prev{content:url(../img/slide_b_left.png);
+	width: 25px;
+	height: 68px;
+	outline-style:none;}
+.swiper-button-prev:after, .swiper-container-rtl .swiper-button-next:after {
+    content: 'prev';
+}
+/*페이지네이션 위치 container 밖으로 변경하기*/
+.con_pag{width:100%;
+	bottom:-40px;}
+.contents2 .swiper-pagination-bullets .swiper-pagination-bullet {
+	margin: 0 4px;}
+
+/*스와이퍼 js는 특성상 이동버튼이 container안에 들어가므로, 1200의 너비 안으로 이동 버튼을 누르고 싶으면 다른 방식을 사용해야 합니다!*/

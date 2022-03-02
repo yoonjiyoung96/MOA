@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project2_moa</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="js/jquery-1.12.3.js"></script>
+    <!--menu-->
+    <script src="js/script.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <link href="css/slide_autoplay.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/flexslider.css">
+    <link rel="stylesheet" href="index.css">
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            //처음들어갔을때 모습 만들기...
+            $(".tab_content").hide(); //tab_content 부분을 모두 숨김.
+            $("ul.tabs li:first").addClass("active").show(); //첫번째 탭이 active클래스를 붙이고, 보여줌.
+            $(".tab_content:first").show(); //tab_contents중 첫번째꺼를 보여줌
+
+            //On Click Event
+            $("ul.tabs li").click(function () {
+
+                $("ul.tabs li").removeClass("active"); //Remove any "active" class
+                $(this).addClass("active"); //선택한 탭에만 active클래스 붙임
+                $(".tab_content").hide(); //모든 contents들 숨김
+
+                var activeTab = $(this).find("a").attr("href");
+                $(activeTab).fadeIn();
+                return false;
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="header_inner">
+            <input type="checkbox" id="menuicon">
+            <label for="menuicon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <div class="sidebar">
+                <ul class="nav">
+                    <li><a href="#section1">SHOP</a>
+                        <ul class="sub">
+                            <li><a href="#tab1">RING</a></li>
+                            <li><a href="#">NECKLACE</a></li>
+                            <li><a href="#">BRACELET</a></li>
+                            <li><a href="#">ETC</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#section2">ABOUT</a>
+                        <ul class="sub">
+                            <li><a href="#">STORY</a></li>
+                            <li><a href="#">INTRODUCTION</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#section3">GALLERY</a>
+                        <ul class="sub">
+                            <li><a href="#">PHOTOS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#section4">COMMUNITY</a>
+                        <ul class="sub">
+                            <li><a href="#">EVENT</a></li>
+                            <li><a href="#">NOTICE</a></li>
+                            <li><a href="#">Q&A</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="main_logo">
+                <a href="#"><img src="images/main_logo.png" alt="main_logo"></a>
+            </div>
+            <!--main_logo E-->
+            <div class="lnb">
+                <ul>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Join</a></li>
+                    <li><a href="#">Cart</a></li>
+                </ul>
+            </div>
+            <!--lnb E-->
+            <!--header_inner E-->
+    </header>
+    <div id="main_banner">
+        <div class="main_inner">
+            <div class="phrase">
+                <h3> 너와 나의 추억을 모아</h3>
+                <h2>
+                    <p class="typing-txt">Gather the memories of you, my little fluffy friend</p>
+                    <p class="typing"></p>
+                </h2>
+            </div>
+        </div>
+    </div>
+    <!--main_banner E-->
+    <div class="title" data-aos="slide-up" data-aos-duration="700">Brand MOA</div>
+    <div id="intro">
+        <div class="intro_inner">
+            <p>우리가 함께 했던 시간을 모아, <br class="hide"> 우리의 추억을 모아 항상 함께하자</p>
+            <p class="gray">추억(Reminiscence)<br class="hide">흔적(Traces)<br class="hide"> 소중히 간직하다(Cherish)</p>
+            <div class="img1" data-aos="flip-left" data-aos-duration="1500"><img src="images/intro1.jpg" alt="intro1">
+            </div>
+            <div class="text1">
+                <h3>Gather the memories of your pet</h3>
+                <h4>반려동물과의 추억을 매일 착용할 수 있는 쥬얼리에 담아</h4>
+                <p>나의 작은 털복숭이와 매일 함께, 작은 흔적을 간직하는 방법<br>우리의 추억을 쥬얼리에 담아 언제 어디든 함께 하는 기분</p>
+            </div>
+            <div class="img2" data-aos="flip-left" data-aos-duration="1800"><img src="images/intro2.jpg" alt="intro2">
+            </div>
+            <div class="text2">
+                <h3>Always be with you, my little fluffy friend</h3>
+                <h4>작은 털복숭이의 흔적을 모아 만드는 나만의 쥬얼리</h4>
+                <p>반려동물을 떠올리게 하는 부드럽고 예쁜, 반려동물의 털<br>소중히 모아 탄생하는 세상에 하나뿐인 특별한 쥬얼리</p>
+            </div>
+        </div>
+    </div>
+    <!--intro E-->
+    <div id="new">
+        <div class="title" data-aos="slide-up" data-aos-duration="700">NEW ITEM</div>
+        <div class="forbox">
+            <div class="box">
+                <p class="pota">OUR CIRCLE SERIES</p>
+                <P class="batang">우리를 잇는 원, 우리만의 세계</P>
+            </div>
+        </div>
+        <!--Swiper-->
+        <div class="swiper newitem">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="images/new1.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/new2.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/new3.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/new4.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/new5.jpg" alt="">
+                </div>
+            </div>
+            <!--wrapper E-->
+            <div class="swiper-pagination"></div>
+        </div>
+        <!--container E-->
+        <script>
+            var swiper = new Swiper('.newitem', {
+                autoplay: {
+                    delay: 2500,//슬라이드 넘어가는 시간
+                    disableOnInteraction: false,
+                },
+                loop: true,//슬라이드 무한반복
+                pagination: {//블릿 버튼
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+            });
+        </script>
+        <!--box E-->
+    </div>
+    <!--new E-->
+    <div class="s_border">
+        <div id="s_blank">
+            <div class="s_box">
+                <p><input type="serch" class="blank" placeholder="'검색어를 입력하세요'">
+                    <button type="submit" class="button1">SEARCH</button>
+                </p>
+            </div>
+            <!--search E-->
+        </div>
+    </div>
+    <div id="menu">
+        <div class="tabs_c">
+            <ul class="tabs">
+                <li><a href="#tab1">RING</a></li>
+                <li><a href="#tab2">NECKLACE</a></li>
+                <li><a href="#tab3">BRACELET</a></li>
+                <li><a href="#tab4">ETC</a></li>
+            </ul>
+        </div>
+        <div class="tab_container">
+            <div id="tab1" class="tab_content">
+                <ul>
+                    <li><a href="#">
+                            <div class="textbox">
+                                <img src="images/circle2.png" alt="">
+                            </div>
+                            <img src="images/ring/r1.jpg" alt="" class="main_box">
+                            <p class="product">Our Memory Ring <br>(White Gold)</p>
+                            <p class="price">145,000won</p>
+                        </a></li>
+                    <li><a href="#">
+                            <div class="textbox">
+                                <img src="images/circle2.png" alt="">
+                            </div>
+                            <img src="images/ring/r2.jpg" alt="">
+                            <p class="product">Our Memory Ring <br>(Gold)</p>
+                            <p class="price">135,000won</p>
+                        </a></li>
+                    <li><a href="#">
+                            <div class="textbox">
+                                <img src="images/circle2.png" alt="">
+                            </div>
+                            <img src="images/ring/r3.jpg" alt="">
+                            <p class="product">Our Memory Ring <br>(Silver)</p>
+                            <p class="price">47,000won</p>
+                        </a></li>
+                    <li><a href="#">
+                            <div class="textbox">
+                                <img src="images/circle2.png" alt="">
+                            </div>
+                            <img src="images/ring/r4.jpg" alt="">
+                            <p class="product">Our Memory Ring <br>(Rose Gold)</p>
+                            <p class="price">145,000won</p>
+                        </a></li>
+                </ul>
+            </div>
+
+            <div id="tab2" class="tab_content">
+                <ul>
+                    <li><a href="#">
+                            <div class="textbox">
+                                <img src="images/circle2.png" alt="">
+                            </div>
+                            <img src="images/necklace/neck1.jpg" alt="">
+                            <p class="product">Our Circle Necklace <br>-Round/Dot Heart(Rose Gold)</p>
+                            <p class="price">250,000won</p>
+                        </a></li>
+                    <li><a href="#">
+                            <div class="textbox">
+                                <img src="images/circle2.png" alt="">
+                            </div>
+                            <img src="images/necklace/neck2.jpg" alt="">
+                            <p class="product">To Remember Necklace <br>-Dot Heart(Gold)</p>
+                            <p class="price">230,000won</p>
+                        </a></li>
+                    <li><a href="#">
+                            <div class="textbox">
+                                <img src="images/circle2.png" alt="">
+                            </div>
+                            <img src="images/necklace/neck3.jpg" alt="">
+                            <p class="product">To Remember Necklace<br>-Heart/Round(White Gold)</p>
+                            <p class="price">250,000won</p>
+                        </a></li>
+                    <li><a href="#">
+                            <div class="textbox">
+                                <img src="images/circle2.png" alt="">
+                            </div>
+                            <img src="images/necklace/neck4.jpg" alt="">
+                            <p class="product">Our Circle Necklace <br>-Dot Round(Silver)</p>
+                            <p class="price">74,000won</p>
+                        </a></li>
+                    <li><a href="#">
+                            <div class="textbox">
+                                <img src="images/circle2.png" alt="">
+                            </div>
+                            <img src="images/necklace/neck5.jpg" alt="">
+                            <p class="product">To Remember Necklace <br>-Dot Heart(Silver)</p>
+                            <p class="price">74,000won</p>
+                        </a></li>
+                    <li><a href="#">
+                            <div class="textbox">
+                                <img src="images/circle2.png" alt="">
+                            </div>
+                            <img src="images/necklace/neck6.jpg" alt="">
+                            <p class="product">Our Planet Necklace <br>(Silver))</p>
+                            <p class="price">69,000won</p>
+                        </a></li>
+                    <li><a href="#">
+                            <div class="textbox">
+                                <img src="images/circle2.png" alt="">
+                            </div>
+                            <img src="images/necklace/neck7.jpg" alt="">
+                            <p class="product">Our Galaxy Necklace <br>(Silver))</p>
+                            <p class="price">76,000won</p>
+                        </a></li>
+                    <li><a href="#">
+                            <div class="textbox">
+                                <img src="images/circle2.png" alt="">
+                            </div>
+                            <img src="images/necklace/neck8.jpg" alt="">
+                            <p class="product">Our Galaxy Necklace <br>(Rose Gold)</p>
+                            <p class="price">250,000won</p>
+                        </a></li>
+                </ul>
+
+            </div>
+            <div id="tab3" class="tab_content">
+                <ul>
+                    <li><a href="#">
+                            <div class="textbox">
+                                <img src="images/circle2.png" alt="">
+                            </div>
+                            <img src="images/bracelet/b1.jpg" alt="">
+                            <p class="product">Our Circle Bracelet<br>-Round/Bold Chain(Silver)</p>
+                            <p class="price">70,000won</p>
+                        </a></li>
+                    <li><a href="#">
+                            <div class="textbox">
+                                <img src="images/circle2.png" alt="">
+                            </div>
+                            <img src="images/bracelet/b2.jpg" alt="">
+                            <p class="product">To Remember Bracelet<br>-2Charms/Ball Chain(Gold)</p>
+                            <p class="price">270,000won</p>
+                        </a></li>
+                    <li><a href="#">
+                            <div class="textbox">
+                                <img src="images/circle2.png" alt="">
+                            </div>
+                            <img src="images/bracelet/b3.jpg" alt="">
+                            <p class="product">To Remember Bracelet<br>-Heart/Ball Chain(Silver)</p>
+                            <p class="price">65,000won</p>
+                        </a></li>
+                    <li><a href="#">
+                            <div class="textbox">
+                                <img src="images/circle2.png" alt="">
+                            </div>
+                            <img src="images/bracelet/b4.jpg" alt="">
+                            <p class="product">To Remember Bracelet<br>-2Charms/Bold Ball Chain(Gold)</p>
+                            <p class="price">270,000won</p>
+                        </a></li>
+                </ul>
+            </div>
+            <div id="tab4" class="tab_content">
+                <ul>
+                    <li><a href="#">
+                            <div class="textbox">
+                                <img src="images/circle2.png" alt="">
+                            </div>
+                            <img src="images/etc/e1.jpg" alt="">
+                            <p class="product">Our Galaxy Collar<br>-Leather(Yellow)</p>
+                            <p class="price">30,000won</p>
+                        </a></li>
+                    <li><a href="#">
+                            <div class="textbox">
+                                <img src="images/circle2.png" alt="">
+                            </div>
+                            <img src="images/etc/e2.jpg" alt="">
+                            <p class="product">Our Galaxy Collar<br>-Leather(Red)</p>
+                            <p class="price">30,000won</p>
+                        </a></li>
+                    <li><a href="#">
+                            <div class="textbox">
+                                <img src="images/circle2.png" alt="">
+                            </div>
+                            <img src="images/etc/e3.jpg" alt="">
+                            <p class="product">Our Galaxy Collar<br>-Leather(Brown)</p>
+                            <p class="price">30,000won</p>
+                        </a></li>
+                    <li><a href="#">
+                            <div class="textbox">
+                                <img src="images/circle2.png" alt="">
+                            </div>
+                            <img src="images/etc/e4.jpg" alt="">
+                            <p class="product">Our Planet Collar<br>-Ball Chain(Silver)</p>
+                            <p class="price">41,000won</p>
+                        </a></li>
+                    <li><a href="#">
+                            <div class="textbox">
+                                <img src="images/circle2.png" alt="">
+                            </div>
+                            <img src="images/etc/e5.jpg" alt="">
+                            <p class="product">Food Bowl<br>(Ceramic)</p>
+                            <p class="price">30,000won</p>
+                        </a></li>
+                    <li><a href="#">
+                            <div class="textbox">
+                                <img src="images/circle2.png" alt="">
+                            </div>
+                            <img src="images/etc/e6.jpg" alt="">
+                            <p class="product">Portable Food Bowl<br>-with Chain</p>
+                            <p class="price">26,000won</p>
+                        </a></li>
+                    <li><a href="#">
+                            <div class="textbox">
+                                <img src="images/circle2.png" alt="">
+                            </div>
+                            <img src="images/etc/e7.jpg" alt="">
+                            <p class="product">Comb Set<br>-3Combs in One</p>
+                            <p class="price">59,000won</p>
+                        </a></li>
+                    <li><a href="#">
+                            <div class="textbox">
+                                <img src="images/circle2.png" alt="">
+                            </div>
+                            <img src="images/etc/e8.jpg" alt="">
+                            <p class="product">Deshedding Brush<br>(Dog/Cat)</p>
+                            <p class="price">45,000won</p>
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--menu E-->
+    <div id="best">
+        <div class="title" data-aos="slide-up" data-aos-duration="700">이달의 BEST</div>
+        <div id="main" role="main">
+            <section class="slider">
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li data-thumb="images/thumb/t1.jpg">
+                            <img src="images/big1.jpg" alt="">
+                        </li>
+                        <li data-thumb="images/thumb/t2.jpg">
+                            <img src="images/big2.jpg" alt="">
+                        </li>
+                        <li data-thumb="images/thumb/t3.jpg">
+                            <img src="images/big3.jpg" alt="">
+                        </li>
+                        <li data-thumb="images/thumb/t4.jpg">
+                            <img src="images/big4.jpg" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!--best E-->
+    <div id="collabo">
+        <div class="title" data-aos="slide-up" data-aos-duration="1500">COLLABORATION</div>
+        <div class="contents2">
+            <div class="swiper-container center">
+                <div class="swiper-wrapper ccwrapper">
+                    <div class="swiper-slide">
+                        <p class="collabo_name">국내 최대규모 온라인 편집샵 <br class="brbr"> 무신사X브랜드 MOA</p>
+                        <img src="images/collaboration/collabo1.jpg" alt="">
+                        <P class="collabo_ex">MZ세대가 사랑하는 브랜드[무신사]와 [모아]가 만나 탄생한 실용적이고 힙한 반려동물을 <br class="br">위한
+                            휴대용 밥그릇! 어디서나 반려동물과
+                            함께 여행? 산책길? 이제 더 가볍게 편리하게!</P>
+                    </div>
+                    <div class="swiper-slide">
+                        <p class="collabo_name">반려동물 용품 브랜드 <br class="brbr">케어펫X브랜드 MOA</p>
+                        <img src="images/collaboration/collabo2.jpg" alt="">
+                        <P class="collabo_ex">합리적 가격을 지향하는 반려동물 용품 브랜드[케어펫]의 대표 상품 '사랑빗'을 뛰어넘는 <br class="br"> 상품을
+                            [모아]와 함께 만들어 냈습니다.
+                            보다
+                            더 뛰어난 성능, 디자인, 합리적인 가격까지!</P>
+                    </div>
+                    <div class="swiper-slide">
+                        <p class="collabo_name">프리미엄 반려동물 용품 브랜드 <br class="brbr">콤펫샵X브랜드 MOA</p>
+                        <img src="images/collaboration/collabo3.jpg" alt="">
+                        <P class="collabo_ex">프리미업 반려동물 용품 브랜드 [콤펫샵]과 브랜드 [모아]의 스페셜 콜라보! 130개 항목의 안전테스트를 거친 최고의 품질과 어디서도
+                            볼 수 없던 색감과 디자인! 지금 만나보세요 </P>
+                    </div>
+                    <div class="swiper-slide">
+                        <p class="collabo_name">자연주의 코스메틱 브랜드 <br class="brbr">비욘드X브랜드 MOA</p>
+                        <img src="images/collaboration/collabo4.jpg" alt="">
+                        <P class="collabo_ex">에코 그 이상의 자연주의 철학을 가진 코스메틱 브랜드 [비욘드]와 [모아]가 만들어 낸<br class="br">친환경 애견샴푸!
+                            안심하고 사용할 수 있도록,
+                            클래식한 자연주의에 프리미엄을 더했습니다 </P>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination con_pag"></div>
+        </div>
+    </div>
+    <!--collabo E-->
+    <div id="lookbook">
+        <div class="title" data-aos="slide-up" data-aos-duration="2000" data-aos-offset="500">
+            LOOKBOOK</div>
+        <div class="lookbook_img" data-aos="zoom-in" data-aos-duration="2000" data-aos-easing="ease-out-back"><img
+                src="images/lookbook_img.jpg" alt="">
+        </div>
+    </div>
+    <!--lookbook E-->
+    <div id="event" data-aos="slide-right" data-aos-duration="2500" data-aos-delay="500">
+        <div class="title">EVENT & NEWS</div>
+        <ul class="event_ul">
+            <li><a href="#"><img src="images/event1.jpg" alt=""></a></li>
+            <li><a href="#"><img src="images/event2.jpg" alt=""></a></li>
+        </ul>
+    </div>
+    <!--event E-->
+    <div id="gallery" data-aos="slide-left" data-aos-duration="3000" data-aos-delay="500">
+        <div class="title">GALLERY</div>
+        <ul class="photos">
+            <li><img src="images/gallery/g1.jpg" alt=""></li>
+            <li><img src="images/gallery/g2.jpg" alt=""></li>
+            <li><img src="images/gallery/g3.jpg" alt=""></li>
+            <li><img src="images/gallery/g4.jpg" alt=""></li>
+            <li><img src="images/gallery/g5.jpg" alt=""></li>
+            <li><img src="images/gallery/g6.jpg" alt=""></li>
+            <li><img src="images/gallery/g7.jpg" alt=""></li>
+            <li><img src="images/gallery/g8.jpg" alt=""></li>
+        </ul>
+    </div>
+    </div>
+    <!--gallery E-->
+    <div class="title" data-aos="slide-up" data-aos-duration="3000">자주묻는 질문 Q&A</div>
+    <div class="notice">
+        <ul>
+            <li>
+                <div class="question">
+                    <div class="q_in">Q : 쥬얼리 제작 과정이 어떻게 되나요?</div>
+                    <div class="plus"><img src="images/plus.png" alt=""></div>
+                </div>
+                <div class="text_info">
+                    <p class="ask">A : 제작 과정은 크게 4가지로 진행됩니다. 아래 자세한 설명을 참고해주세요!</p>
+                    <div class="icon">
+                        <img src="images/qna/icon1.png" alt="">
+                        <p>* 모든 제작 건은 한정수량 프리오더로 진행 <br> <span class="info_font">주문 → 입금 → 확인 → 주문완료 </span>
+                        </p>
+                    </div>
+                    <div class="icon">
+                        <img src="images/qna/icon2.png" alt="">
+                        <p>* 주문 완료하신 분들에 한해 자택으로 키트 발송 <br><span class="info_font">-안내카드, 털봉투, 체크리스트, 기록카드,
+                                회신봉투</span></p>
+                    </div>
+                    <div class="icon">
+                        <img src="images/qna/icon3.png" alt="">
+                        <p>* 키트 수령 후 내용기입, [동봉된 회신봉투]발송 <br> <span class="info_font">키트수령 → 내용기입 → 우체통/우체국 →
+                                발송</span></p>
+                    </div>
+                    <div class="icon">
+                        <img src="images/qna/icon4.png" alt="">
+                        <p>* 회신봉투 수령 후 제작/소요시간 1~2주 <br> <span class="info_font">회신봉투수령 → 확인 → 제작 → 완료 후 배송</span>
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="question">
+                    <div class="q_in">Q : 보내주시는 키트 구성은 어떻게 되나요?</div>
+                    <div class="plus"><img src="images/plus.png" alt=""></div>
+                </div>
+                <div class="text_info">
+                    <p class="ask">A : [안내카드, 털봉투(지퍼백), 체크리스트, 회신봉투]가 포함됩니다. <br>자세한 설명은 아래를 참고해주세요!</p>
+                    <img src="images/qna/qna2.jpg" alt="" class="img_center">
+                </div>
+            </li>
+            <li>
+                <div class="question">
+                    <div class="q_in">Q : 패키지 등 주의사항에 대해 자세히 알고 싶어요!</div>
+                    <div class="plus"><img src="images/plus.png" alt=""></div>
+                </div>
+                <div class="text_info">
+                    <p class="ask">A : 저희 브랜드 MOA는 특별한 쥬얼리를 제작하는 만큼 패키징에 신경쓰고 있습니다. 선물을 보내드린다느 기분을 느끼실 수 있도록 배송을 받으시고
+                        <br> 확인해 주시면 감사하겠습니다. 이외에 관련 주의사항은 아래를 참고해 주세요!
+                    </p>
+                    <div class="info_box">
+                        <div class="package">
+                            <img src="images/qna/icon5.png" alt="">
+                            <p>* 꼼꼼히 확인하여 보내드리고 있으나 혹여나 구성품 누락이 있을시, 고객센터로 연락주시기 바랍니다 <br>
+                                <span class="info_font">패키지 구성품 : 털봉투(털이 남았을시)/엽서/브로셔/보내주셨던 체크리스트/상품/품질보증서</span>
+                            </p>
+                        </div>
+                        <div class="package">
+                            <img src="images/qna/icon6.png" alt="">
+                            <p>* 소중한 반려동물의 털로 제작되는 쥬얼리기 때문에 털관리, 털의 분실에 굉장히 신경쓰고 있습니다. 그리하여 <br>매 주문 한정수량으로 진행됩니다
+                                <br> <span class="info_font">체크리스트 항목을 최대한 자세히 기입해주세요 제작되어지는 쥬얼리에 큰 영향을 줍니다</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="question">
+                    <div class="q_in">Q : 환불/교환 규정은 어떻게 되나요?</div>
+                    <div class="plus"><img src="images/plus.png" alt=""></div>
+                </div>
+                <div class="text_info">
+                    <p class="ask">A : 환불은 상품을 받으신 후 7일 이내로 도와드리고 있습니다. 교환은 상품을 받으신 후 제품에 문제가 있다면, 1년 이내에 가능합니다. 자세한 사항
+                        아래 참고해 주세요!</p>
+                    <div class="refund">
+                        <img src="images/qna/qna3.jpg" alt="">
+                        <div class="re_text">
+                            <p>* 환불/교환 시 옆 이미지와 같이 상품을 구매하실 때 받으셨던 <br> 품질보증서를 꼭 지참해 주세요. 그렇지 않을시, 진행이 어렵습니다.</p>
+                            <p class="text_bold">[보상/AS 규정]</p>
+                            <div class="font_15">
+                                <p>고객의 부주의로 인한 제품 훼손 및 교체는 보증 대상에서 제외되며 품질보증기간은 구입일로부터 최대 1년입니다</p>
+                                <p>상품 및 패키지 훼손, 사용 흔적이 있는 제품, 단순변심에 의한 반품은 불가합니다</p>
+                                <p>핸드메이드 제품 특성상 발생하는 미세한 스크래치 또는 기포는 교환, 환불사유가 될 수 없습니다</p>
+                                <p>개인적인 재질 특성 및 관리에 따른 알러지 반응은 책임지지 않습니다</p>
+                                <p>교환/반품 시에는 먼저 moa_moa@naver.com 또는 010-8214-0398로 연락을 남겨주세요</p>
+                                <p>보증기간이 경과한 제품이나 소비자의 과실에 의한 하자 발생 시 소정의 수리비용이 부과됩니다</p>
+                                <p>이외에 다른 문의는 메일/전화 주시면 자세히 안내해 드리겠습니다</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="question">
+                    <div class="q_in">Q : 키트발송 후에는 교환이나 변경이 안되나요?</div>
+                    <div class="plus"><img src="images/plus.png" alt=""></div>
+                </div>
+                <div class="text_info">
+                    <p class="ask">A : 주문완료/키트발송/회신/제작/제작완료/상품배송 총 5단계에 걸쳐 고객님들께 안내문자를 드립니다. 제작 전 까지, 키트수령 안내문자를 받으신 후
+                        <br>
+                        반드시 2일 이내에 연락을 주셔야 교환/변경이 가능합니다. 제작시작 후에는 교환/변경 일체 이루어지지 않습니다
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="question">
+                    <div class="q_in">Q : 제작참고 이미지는 어디서 볼 수 있나요?</div>
+                    <div class="plus"><img src="images/plus.png" alt=""></div>
+                </div>
+                <div class="text_info">
+                    <p class="ask">A : 첫 주문 시, 디자인, 레터링, 각인 등은 홈페이지 내 [GALLERY] 페이지 또는 공식 SNS(@moa_moa)에 업로드 된 이미지와 다른
+                        고객님들의 후기 사진을 참고해 주세요<br>레터링/각인은 상품 상세설명 페이지 하단을 봐주세요
+                    </p>
+                    <div class="sns">
+                        <div class="sns_img"> <img src="images/qna/qna4.jpg" alt="" class="sns1"></div>
+                        <ul class="sns_sns">
+                            <li><a href="#"><img src="images/qna/icon7.png" alt="">공식 인스타그램 바로가기</a></li>
+                            <li><a href="#"><img src="images/qna/icon8.png" alt="">GALLERY 페이지 바로가기</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--notice E-->
+    <div class="mobile_lnb">
+        <ul>
+            <li>
+                <div class="mobile">
+                    <div class="mobile_in"><a href="#none">SHOP</a></div>
+                    <div class="arrow"><img src="images/arrow.png" alt=""></div>
+                    <div class="mobile_info">
+                        <ul>
+                            <li><a href="#">RING</a></li>
+                            <li><a href="#">NECKLACE</a></li>
+                            <li><a href="#">BRACELET</a></li>
+                            <li><a href="#">ETC</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="mobile">
+                    <div class="mobile_in"><a href="#none">ABOUT</a></div>
+                    <div class="arrow"><img src="images/arrow.png" alt=""></div>
+                    <div class="mobile_info">
+                        <ul>
+                            <li><a href="#">STORY</a></li>
+                            <li><a href="#">INTRODUCTION</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="mobile">
+                    <div class="mobile_in"><a href="#none">GALLERY</a></div>
+                    <div class="arrow"><img src="images/arrow.png" alt=""></div>
+                    <div class="mobile_info">
+                        <ul>
+                            <li><a href="#">PHOTOS</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="mobile">
+                    <div class="mobile_in"><a href="#none">COMMUNITY</a></div>
+                    <div class="arrow"><img src="images/arrow.png" alt=""></div>
+                    <div class="mobile_info">
+                        <ul>
+                            <li><a href="#">EVENT</a></li>
+                            <li><a href="#">NOTICE</a></li>
+                            <li><a href="#">Q&A</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <footer>
+        <div class="footer_inner">
+            <ul class="footer_lnb">
+                <li><a href="#">PRIVACY</a></li>
+                <li><a href="#">AGREEMENT</a></li>
+            </ul>
+            <div class="footer_center">
+                <p>COMPANY:MOA CEO:YOON, JIOYOUNG TEL:010-8214-0398</p>
+                <P>ADD:부산시 부산진구 전포대로 163번지 E-MAIL:MOA_MOA@NAVER.COM</P>
+                <P>CORPORATE_REGNO:122-01-00220 COPYRIGHTⓒMOA.ALL RIGHTS RESERVED</P>
+            </div>
+            <div class="footer_logo"><img src="images/footer_logo.png" alt=""></div>
+        </div>
+    </footer>
+
+    <script>
+        var swiper = new Swiper('.center', {
+            slidesPerView: 1,//보여지는슬라이드 개수
+            spaceBetween: 0,
+            loop: true,//슬라이드 무한반복
+            navigation: {//화살표 버튼
+                nextEl: '.con_next',
+                prevEl: '.con_prev',
+            },
+            pagination: {//블릿 버튼
+                el: '.con_pag',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 6000,//슬라이드 넘어가는 시간
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+
+                600: {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                },
+                1320: {
+                    slidesPerView: 2,
+                    spaceBetween: 80,
+                },
+            },
+        });
+    </script>
+    <!--collabo E-->
+
+    <script>
+        var typingBool = false;
+        var typingIdx = 0;
+        var typingTxt = $(".typing-txt").text(); // 타이핑될 텍스트를 가져온다 
+        typingTxt = typingTxt.split(""); // 한글자씩 자른다. 
+        if (typingBool == false) { // 타이핑이 진행되지 않았다면 
+            typingBool = true;
+
+            var tyInt = setInterval(typing, 70); // 타이핑 스피드 설정 
+        }
+
+        function typing() {
+            if (typingIdx < typingTxt.length) { // 타이핑될 텍스트 길이만큼 반복 
+                $(".typing").append(typingTxt[typingIdx]); // 한글자씩 이어준다. 
+                typingIdx++;
+            } else {
+                clearInterval(tyInt); //끝나면 반복종료
+            }
+        }
+    </script>
+
+
+    <!-- jQuery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
+
+    <!-- FlexSlider -->
+    <script defer src="js/jquery.flexslider.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            SyntaxHighlighter.all();
+        });
+        $(window).load(function () {
+            $('.flexslider').flexslider({
+                animation: "fade",
+                controlNav: "thumbnails",
+                directionNav: false,
+                start: function (slider) {
+                    $('body').removeClass('loading');
+                }
+            });
+        });
+    </script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
