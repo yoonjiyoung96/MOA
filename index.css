@@ -20,6 +20,37 @@ a{
  font-family: 'Noto Sans KR', sans-serif;
 }
 
+@font-face {
+  font-family: 'Alivia-Regular';
+  src: url('https://yoonjiyoung96.github.io/link_link/Alivia-Regular.eot');
+  src: url('https://yoonjiyoung96.github.io/link_link/Alivia-Regular.woff') format('woff'),
+       url('https://yoonjiyoung96.github.io/link_link/Alivia-Regular.woff2') format('woff2'),
+  		url('https://yoonjiyoung96.github.io/link_link/Alivia-Regular.eot?#iefix') format('embedded-opentype'),
+       url('https://yoonjiyoung96.github.io/link_link/Alivia-Regular.svg#Alivia-Regular') format('svg'),
+       url('https://yoonjiyoung96.github.io/link_link/Alivia-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Christian Heedlay Italic';
+  src: url('Christian Heedlay Italic.eot');
+  src: url('https://yoonjiyoung96.github.io/link_link/Christian Heedlay Italic.eot?#iefix') format('embedded-opentype'),
+       url('https://yoonjiyoung96.github.io/link_link/Christian Heedlay Italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ChristianHeedlay';
+  src: url('https://yoonjiyoung96.github.io/link_link/ChristianHeedlay.svg#ChristianHeedlay') format('svg'),
+       url('https://yoonjiyoung96.github.io/link_link/ChristianHeedlay.ttf') format('truetype'),
+       url('https://yoonjiyoung96.github.io/link_link/ChristianHeedlay.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body{font-family:"'Noto Sans KR', sans-serif";
     font-size: 14px;
     line-height: 24px;
@@ -224,7 +255,7 @@ p.typing-txt{display: none;}
 	font-size: 36px;
 }
 .phrase h2{
-	font-family: "Alivia";
+	font-family: 'Alivia-Regular';
 	font-weight: lighter;
 	font-size: 50px;
 	padding-top: 50px;
@@ -351,7 +382,7 @@ p.typing-txt{display: none;}
 	text-align: left;
 }
 .intro_inner h3{
-	font-family: "Christian Heedlay";
+	font-family: 'Christian Heedlay';
 	font-size: 17px;
 	font-weight: normal;
 	padding-bottom: 30px;
